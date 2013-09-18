@@ -99,9 +99,9 @@ install:
  - ln -s ${TRAVIS_BUILD_DIR}/tools/fastq/ tools/fastq
  - ln -s ${TRAVIS_BUILD_DIR}/tools/filters/ tools/filters
  - ln -s ${TRAVIS_BUILD_DIR}/tools/mira_3_4/ tools/mira_3_4
- - ln -s ${TRAVIS_BUILD_DIR}/tools/nlstradamus tools/nlstradamus
- - ln -s ${TRAVIS_BUILD_DIR}/tools/plotting tools/plotting
- - ln -s ${TRAVIS_BUILD_DIR}/tools/primers tools/primers
+ - ln -s ${TRAVIS_BUILD_DIR}/tools/nlstradamus/ tools/nlstradamus
+ - ln -s ${TRAVIS_BUILD_DIR}/tools/plotting/ tools/plotting
+ - ln -s ${TRAVIS_BUILD_DIR}/tools/primers/ tools/primers
  - ln -s ${TRAVIS_BUILD_DIR}/tools/protein_analysis/ tools/protein_analysis
  - ln -s ${TRAVIS_BUILD_DIR}/.travis.datatypes_conf.xml datatypes_conf.xml
  - cp ${TRAVIS_BUILD_DIR}/test-data/* test-data/
