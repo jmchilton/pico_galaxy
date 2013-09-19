@@ -63,7 +63,7 @@ before_install:
  - mkdir effectiveT3 && cd effectiveT3
  - export EFFECTIVET3=$PWD
  - wget http://effectors.org/download/version/TTSS_GUI-1.0.1.jar
- - mkdir modules && cd modules
+ - mkdir module && cd module
  - wget http://effectors.org/download/module/TTSS_ANIMAL-1.0.1.jar
  - wget http://effectors.org/download/module/TTSS_PLANT-1.0.1.jar
  - wget http://effectors.org/download/module/TTSS_STD-1.0.1.jar
