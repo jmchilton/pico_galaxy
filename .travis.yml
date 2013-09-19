@@ -61,9 +61,7 @@ before_install:
  - echo "Fetching Galaxy..."
  - wget https://codeload.github.com/jmchilton/galaxy-central/tar.gz/master
  - tar -zxvf master | tail
- - pwd
  - cd galaxy-central-master
- - pwd
 
 # Configuring tools within Galaxy
 # ===============================
@@ -93,7 +91,6 @@ before_install:
 #
 
 install:
- - pwd
  - ln -s ${TRAVIS_BUILD_DIR}/.travis.tool_conf.xml tool_conf.xml
  - rm tool_conf.xml.sample
  - ln -s ${TRAVIS_BUILD_DIR}/.travis.tool_conf.xml tool_conf.xml.sample
@@ -103,7 +100,6 @@ install:
  - ln -s ${TRAVIS_BUILD_DIR}/tools/nlstradamus/ tools/nlstradamus
  - ln -s ${TRAVIS_BUILD_DIR}/tools/primers/ tools/primers
  - ln -s ${TRAVIS_BUILD_DIR}/tools/protein_analysis/ tools/protein_analysis
- - pwd
  - cp ${TRAVIS_BUILD_DIR}/tools/primers/* tools/primers/
  - cp ${TRAVIS_BUILD_DIR}/tools/fastq/ tools/fastq/
  - cp ${TRAVIS_BUILD_DIR}/tools/filters/ tools/filters/
