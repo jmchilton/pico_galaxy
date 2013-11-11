@@ -95,9 +95,11 @@ before_install:
  - sudo apt-get install samtools
  - echo "Fetching Galaxy..."
  - cd ${TRAVIS_BUILD_DIR}
- - wget https://codeload.github.com/jmchilton/galaxy-central/tar.gz/master
- - tar -zxvf master | tail
- - cd galaxy-central-master
+ - wget https://codeload.github.com/jmchilton/galaxy-central/tar.gz/tool_test
+ - tar -zxvf tool_test | tail
+ - cd galaxy-central-tool_test
+ - sudo apt-get install python-pip
+ - sudo pip install requests  # Needed for twill-less tool tests for now.
 
 # Configuring tools within Galaxy
 # ===============================
@@ -128,6 +130,7 @@ before_install:
 
 install:
  - export GALAXY_TEST_DB_TEMPLATE=https://github.com/jmchilton/galaxy-downloads/raw/master/db_gx_rev_0117.sqlite
+ - export GALAXY_TEST_DEFAULT_INTERACTOR='api'
  - ln -s ${TRAVIS_BUILD_DIR}/.travis.tool_conf.xml tool_conf.xml
  - rm tool_conf.xml.sample
  - ln -s ${TRAVIS_BUILD_DIR}/.travis.tool_conf.xml tool_conf.xml.sample
