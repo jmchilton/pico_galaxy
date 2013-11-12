@@ -129,18 +129,18 @@ data = ${f.ext}::$f
     <tests>
         <!-- Tiger mitochondria, selected paired end Illumina reads from SRR639755
              Note we're using just one repeat group, and only the filenames parameter
-             within it, so this should work with current test framework limitations:
+             within it, so this should work with current test framework limitations: -->
         <test>
             <param name="job_type" value="genome" />
             <param name="job_quality" value="accurate" />
             <param name="filenames" value="SRR639755_mito_pairs.fastq.gz" ftype="fastqsanger" />
             <output name="out_fasta" file="SRR639755_mito_pairs.mira4_de_novo.fasta" ftype="fasta" />
         </test>
-        -->
+        <!-- -->
         <!-- Simple assembly based on MIRA's minidemo/demo4 example
              Note we're using just one repeat group,
              but several parameters with the repeat
-             (in order to specify sanger reads, no pairing)
+             (in order to specify sanger reads, no pairing) -->
         <test>
             <param name="job_type" value="genome" />
             <param name="job_quality" value="accurate" />
@@ -149,10 +149,10 @@ data = ${f.ext}::$f
             <param name="filenames" value="U13small_m.fastq" ftype="fastqsanger" />
             <output name="out_fasta" file="U13small_m.mira4_de_novo.fasta" ftype="fasta" />
         </test>
-        -->
-	<!-- Simple assembly based on MIRA's minidemo/solexa1 example
+        <!-- -->
+       	<!-- Simple assembly based on MIRA's minidemo/solexa1 example
              Note we're using just one repeat group,
-             but two parameters within the repeat (filename, no pairing)
+             but two parameters within the repeat (filename, no pairing) -->
         <test>
             <param name="job_type" value="genome" />
             <param name="job_quality" value="accurate" />
@@ -160,7 +160,6 @@ data = ${f.ext}::$f
             <param name="filenames" value="ecoli.fastq" ftype="fastqsanger" />
             <output name="out_fasta" file="ecoli.mira4_de_novo.fasta" ftype="fasta" />
         </test>
-        -->
     </tests>
     <help>
 

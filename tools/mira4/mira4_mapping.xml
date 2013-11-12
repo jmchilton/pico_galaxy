@@ -1,4 +1,5 @@
 <tool id="mira_4_0_mapping" name="MIRA v4.0 mapping" version="0.0.2">
+
     <description>Maps Sanger, Roche 454, Solexa/Illumina, Ion Torrent and PacBio reads</description>
     <requirements>
         <requirement type="binary">mira</requirement>
@@ -154,8 +155,6 @@ data = ${f.ext}::$f
     <tests>
         <!-- Deliberately using default read_group.technology value "solexa"
              as then Galaxy's broken <repeat> handling in tests should work... -->
-        <!-- Tests currently failing,
-             TwillException: more than one form; you must select one (use 'fv') before submitting
         <test>
             <param name="job_type" value="genome" />
             <param name="job_quality" value="accurate" />
@@ -172,7 +171,6 @@ data = ${f.ext}::$f
             <param name="filenames" value="tvc_mini.fastq" ftype="fastqsanger" />
             <output name="out_fasta" file="tvc_map_ref_strain.fasta" ftype="fasta" />
         </test>
-        -->
     </tests>
     <help>
 
